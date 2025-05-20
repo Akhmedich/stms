@@ -13,14 +13,11 @@ export default function AuthCallback() {
   const router = useRouter();
 
   useEffect(() => {
-    supabase.auth.exchangeCodeForSession().finally(() => {
-      router.replace('/dashboard');   // куда редиректить после логина
-    });
+    // обмен токена на сессию и редирект
+    supabase.auth
+      .exchangeCodeForSession({})
+      .finally(() => router.replace('/dashboard'));
   }, []);
 
-  return (
-    <p className="p-4 text-center">
-      Signing you in…
-    </p>
-  );
+  return <p className="p-4 text-center">Signing you in…</p>;
 }
