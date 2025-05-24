@@ -10,7 +10,15 @@ export default function OrdersPage() {
     <div className="p-6">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-xl font-semibold">Orders</h1>
-        <Button onClick={() => setDrawerOpen(true)}>+ Create</Button>
+        <Button
+  onClick={() => setDrawerOpen(true)}
+  variant="default"
+  size="sm"
+  className="px-4"
+>
+  + Create
+</Button>
+
       </div>
 
       {/* Тут будет твоя таблица Orders или Trips */}

@@ -22,9 +22,9 @@
       "next/navigation",
       "react"
     ],
-    "baseUrl": ".",
+      "baseUrl": ".",                 // корень репо
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]              // или "./src/*" — оба варианта ок
     },
     "incremental": true,
     "plugins": [
